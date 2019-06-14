@@ -12,8 +12,10 @@ namespace Fake_Dashboard
 {
     public partial class Dean : Form
     {
-        public Dean()
+        string UPI;
+        public Dean(string LoginUPI)
         {
+            UPI = LoginUPI;
             InitializeComponent();
             DatabaseQuery.SetCourseNumComboBox(CourseNumComboBox);
             //DatabaseQuery.showDataTable(this.DataTable1, "CS101");
@@ -30,6 +32,12 @@ namespace Fake_Dashboard
             //MessageBox.Show(CourseNumComboBox.Items[CourseNumComboBox.SelectedIndex].ToString());
             DatabaseQuery.ShowStudentDataTable(this.StudentDataTable, courseNum);
             DatabaseQuery.ShowLecturerDataTable(this.LecturerDataTable, courseNum);
+        }
+
+        private void ProfileButton_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile(UPI);
+            profile.Show();
         }
     }
 }

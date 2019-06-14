@@ -77,7 +77,7 @@ namespace Fake_Dashboard
                     break;
                 case 3:
                     MessageBox.Show("Welcome Dean");
-                    Dean dean = new Dean();
+                    Dean dean = new Dean(upi);
                     dean.Location = this.Location;
                     dean.StartPosition = this.StartPosition;
                     dean.Size = this.Size;

@@ -114,5 +114,13 @@ namespace Fake_Dashboard
             }
             return profile;
         }
+
+        public static void UpdateProfile (PeopleProfile p)
+        {
+            string sql = "UPDATE People SET Password = '" + p.Password + "',FirstName = '" + p.FirstName + "',Surname = '" + p.Surname + "',Gender = '" + p.Gender + "',DateOfBirth = '" + p.DateOfBirth + "',Email = '" + p.Email + "',PhoneNum = '" + p.PhoneNum + "'WHERE UPI = '" + p.UPI + "'";
+            MessageBox.Show(sql);
+            SQLiteCommand command = new SQLiteCommand(sql, dbconnection);
+            command.ExecuteNonQuery();
+        }
     }
 }

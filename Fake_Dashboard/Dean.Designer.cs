@@ -36,6 +36,7 @@
             this.LecturerDataTable = new System.Windows.Forms.DataGridView();
             this.StudentsLabel = new System.Windows.Forms.Label();
             this.LecturerLabel = new System.Windows.Forms.Label();
+            this.ProfileButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LecturerDataTable)).BeginInit();
             this.SuspendLayout();
@@ -115,6 +116,16 @@
             this.LecturerLabel.TabIndex = 7;
             this.LecturerLabel.Text = "Lecturer";
             // 
+            // ProfileButton
+            // 
+            this.ProfileButton.Location = new System.Drawing.Point(790, 169);
+            this.ProfileButton.Name = "ProfileButton";
+            this.ProfileButton.Size = new System.Drawing.Size(194, 23);
+            this.ProfileButton.TabIndex = 3;
+            this.ProfileButton.Text = "Your Profile";
+            this.ProfileButton.UseVisualStyleBackColor = true;
+            this.ProfileButton.Click += new System.EventHandler(this.ProfileButton_Click);
+            // 
             // Dean
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -124,6 +135,7 @@
             this.Controls.Add(this.StudentsLabel);
             this.Controls.Add(this.LecturerDataTable);
             this.Controls.Add(this.ChangeDataButton);
+            this.Controls.Add(this.ProfileButton);
             this.Controls.Add(this.ShowStatsButton);
             this.Controls.Add(this.AddNewStudentButton);
             this.Controls.Add(this.CourseNumComboBox);
@@ -149,5 +161,6 @@
         private System.Windows.Forms.DataGridView LecturerDataTable;
         private System.Windows.Forms.Label StudentsLabel;
         private System.Windows.Forms.Label LecturerLabel;
+        private System.Windows.Forms.Button ProfileButton;
     }
 }
